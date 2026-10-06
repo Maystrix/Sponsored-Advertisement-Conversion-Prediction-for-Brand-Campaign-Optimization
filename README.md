@@ -5,7 +5,7 @@ This project develops a machine learning classification pipeline to predict whet
 
 The project covers the complete machine learning workflow — from exploratory data analysis and data preprocessing to baseline model comparison and hyperparameter tuning.
 
-📌 Project Overview
+📌 <u> **Project Overview:** </u>
 
 Sponsored advertising is an important component of modern e-commerce platforms. Predicting which advertisement interactions are likely to result in a purchase can help businesses better understand customer behavior and evaluate advertising effectiveness.
 
