@@ -1,5 +1,5 @@
 # Sponsored-Advertisement-Conversion-Prediction-for-Brand-Campaign-Optimization
-### Machine Learning-Based Binary Classification for E-Commerce Advertising
+### Machine Learning-Based Binary Classification for E-Commerce Advertising ![rainbow](https://user-images.githubusercontent.com/102039796/216668803-7f6a97f1-9dff-419e-83e9-c4569092862c.png)
 
 This project develops a machine learning classification pipeline to predict whether a user's interaction with a sponsored advertisement on an e-commerce platform will result in a product purchase (conversion).
 
@@ -130,9 +130,6 @@ Recall	0.6902
 F1-Score	0.6529
 ROC-AUC	0.8835
 
-
-
-
 XGBoost
 
 XGBoost tuning used:
@@ -165,14 +162,15 @@ ROC-AUC	0.9072
 An important finding is that tuning did not automatically improve every metric. The tuned XGBoost model improved precision and ROC-AUC, but its test F1-score was lower than the untuned XGBoost baseline.
 
 📈 Key Findings
-XGBoost provided the strongest baseline F1-score (0.685).
-XGBoost achieved the strongest baseline ROC-AUC (0.903).
-The tuned XGBoost model achieved a ROC-AUC of 0.9072.
-Logistic Regression provided relatively high recall but lower precision.
-Decision Tree showed evidence of overfitting and comparatively weaker performance.
-Random Forest performed better than Logistic Regression and Decision Tree but still showed a train-test performance gap.
-Hyperparameter tuning changed the precision-recall trade-off rather than universally improving all metrics.
-Model evaluation should therefore consider the business objective and appropriate metric, rather than relying only on Accuracy.
+- XGBoost provided the strongest baseline F1-score (0.685).
+- XGBoost achieved the strongest baseline ROC-AUC (0.903).
+- The tuned XGBoost model achieved a ROC-AUC of 0.9072.
+- Logistic Regression provided relatively high recall but lower precision.
+- Decision Tree showed evidence of overfitting and comparatively weaker performance.
+- Random Forest performed better than Logistic Regression and Decision Tree but still showed a train-test performance gap.
+- Hyperparameter tuning changed the precision-recall trade-off rather than universally improving all metrics.
+- Model evaluation should therefore consider the business objective and appropriate metric, rather than relying only on Accuracy.
+  
 🔄 Machine Learning Workflow
 Raw Dataset
      │
