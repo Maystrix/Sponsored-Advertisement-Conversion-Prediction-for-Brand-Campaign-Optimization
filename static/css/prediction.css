@@ -1,0 +1,553 @@
+/* =========================================
+   ADVISION - PREDICTION PAGE
+========================================= */
+
+/* Allow the prediction page to scroll */
+html,
+body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.prediction-page {
+    width: 100%;
+    min-height: calc(100vh - 68px);
+
+    padding: 30px 5% 60px;
+
+    display: block;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.prediction-header {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+}
+
+.prediction-label {
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+
+    color: #6366f1;
+}
+
+.prediction-header h1 {
+    margin: 0;
+
+    font-size: 38px;
+    line-height: 1.1;
+
+    letter-spacing: -1.7px;
+
+    color: #111827;
+}
+
+.prediction-header h1 span {
+    color: #5146e5;
+}
+
+.prediction-header > p:last-child {
+    margin-top: 9px;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+#predictionForm {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.input-panel {
+    width: 100%;
+
+    padding: 26px 30px 30px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================
+   PANEL HEADER
+========================================= */
+
+.panel-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.panel-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 16px;
+}
+
+.panel-title h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #111827;
+}
+
+.panel-title p {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.input-section {
+    padding: 17px 0;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.input-section:first-of-type {
+    border-top: none;
+}
+
+.input-section h3 {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    color: #6366f1;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.fields-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 13px 18px;
+}
+
+
+/* First section = 3 fields */
+
+.input-section:first-of-type .fields-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.input-group {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #475569;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #f8fafc;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    color: #1e293b;
+
+    transition: 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #a1aec0;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+    background: #ffffff;
+
+    border-color: #cbd5e1;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    background: #ffffff;
+
+    border-color: #818cf8;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(99, 102, 241, 0.09);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button-area {
+    width: 100%;
+
+    padding-top: 22px;
+
+    margin-top: 4px;
+
+    border-top: 1px solid #edf1f5;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.predict-button {
+    width: 300px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 24px
+        rgba(79, 70, 229, 0.22);
+
+    transition: 0.2s ease;
+}
+
+.button-arrow {
+    font-size: 17px;
+
+    transition: 0.2s ease;
+}
+
+.predict-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 28px
+        rgba(79, 70, 229, 0.28);
+}
+
+.predict-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.prediction-result {
+    display: none;
+
+    width: 100%;
+    max-width: 1400px;
+
+    min-height: 520px;
+
+    margin: 30px auto 0;
+
+    padding: 55px 30px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(15, 23, 42, 0.07);
+}
+
+.result-icon {
+    width: 78px;
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    border: 1px solid #c7d2fe;
+
+    color: #4f46e5;
+
+    font-size: 30px;
+}
+
+.result-label {
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #6366f1;
+}
+
+.probability {
+    font-size: 62px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #4f46e5;
+}
+
+.prediction-result h2 {
+    margin-top: 16px;
+
+    font-size: 27px;
+
+    color: #1e293b;
+}
+
+#resultRecommendation {
+    max-width: 570px;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #64748b;
+}
+
+.new-prediction {
+    margin-top: 26px;
+
+    padding: 11px 24px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.new-prediction:hover {
+    border-color: #6366f1;
+
+    color: #4f46e5;
+
+    background: #f8f7ff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .prediction-page {
+        padding:
+            25px 20px 50px;
+    }
+
+    .fields-grid,
+    .input-section:first-of-type .fields-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .prediction-page {
+        padding:
+            22px 14px 45px;
+    }
+
+    .prediction-header h1 {
+        font-size: 28px;
+    }
+
+    .prediction-header > p:last-child {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .input-panel {
+        padding:
+            20px 16px 25px;
+    }
+
+    .fields-grid,
+    .input-section:first-of-type .fields-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .predict-button {
+        width: 100%;
+    }
+
+    .prediction-result {
+        min-height: 450px;
+
+        padding:
+            40px 20px;
+    }
+
+    .probability {
+        font-size: 48px;
+    }
+}

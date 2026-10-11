@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AdVision | Prediction</title>
+
+   <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+>
+
+ <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/prediction.css') }}"
+>
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            AdVision
+        </div>
+
+        <nav class="nav-links">
+
+           <a href="{{ url_for('homepage') }}">
+    Home
+</a>
+
+        <a
+    href="{{ url_for('prediction_page') }}"
+    class="active"
+>
+    Prediction
+</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         PREDICTION PAGE
+    =============================== -->
+
+    <main class="prediction-page">
+
+
+        <!-- ==============================
+             HEADER
+        =============================== -->
+
+        <section class="prediction-header">
+
+            <p class="prediction-label">
+                AI-POWERED ADVERTISING
+            </p>
+
+            <h1>
+                Advertisement
+                <span>Conversion Predictor</span>
+            </h1>
+
+            <p>
+                Enter customer and campaign details to predict conversion potential.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             PREDICTION FORM
+        =============================== -->
+
+        <form id="predictionForm">
+
+
+            <!-- ==============================
+                 INPUT CARD
+            =============================== -->
+
+            <section class="input-panel">
+
+
+                <!-- PANEL HEADER -->
+
+                <div class="panel-title">
+
+                    <div class="panel-icon">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Advertisement Parameters
+                        </h2>
+
+                        <p>
+                            Enter customer and campaign interaction details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     CUSTOMER & AUDIENCE
+                =============================== -->
+
+                <div class="input-section">
+
+                    <h3>
+                        Customer & Audience
+                    </h3>
+
+                    <div class="fields-grid">
+
+
+                        <div class="input-group">
+
+                            <label for="user_segment">
+                                User Segment
+                            </label>
+
+                            <select
+                                id="user_segment"
+                                name="user_segment"
+                                required
+                            >
+
+                                <option value="">
+                                    Select segment
+                                </option>
+
+                                <option value="New User">
+                                    New User
+                                </option>
+
+                                <option value="Occasional Buyer">
+                                    Occasional Buyer
+                                </option>
+
+                                <option value="Loyal Customer">
+                                    Loyal Customer
+                                </option>
+
+                                <option value="Returning User">
+                                    Returning User
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="target_audience">
+                                Target Audience
+                            </label>
+
+                            <select
+                                id="target_audience"
+                                name="target_audience"
+                                required
+                            >
+
+                                <option value="">
+                                    Select audience
+                                </option>
+
+                                <option value="Broad">
+                                    Broad
+                                </option>
+
+                                <option value="Retargeting">
+                                    Retargeting
+                                </option>
+
+                                <option value="Interest-Based">
+                                    Interest-Based
+                                </option>
+
+                                <option value="Lookalike">
+                                    Lookalike
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="platform">
+                                Platform
+                            </label>
+
+                            <select
+                                id="platform"
+                                name="platform"
+                                required
+                            >
+
+                                <option value="">
+                                    Select platform
+                                </option>
+
+                                <option value="Target">
+                                    Target
+                                </option>
+
+                                <option value="Best Buy">
+                                    Best Buy
+                                </option>
+
+                                <option value="Amazon">
+                                    Amazon
+                                </option>
+
+                                <option value="eBay">
+                                    eBay
+                                </option>
+
+                                <option value="Walmart">
+                                    Walmart
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     ADVERTISEMENT
+                =============================== -->
+
+                <div class="input-section">
+
+                    <h3>
+                        Advertisement
+                    </h3>
+
+                    <div class="fields-grid">
+
+
+                        <div class="input-group">
+
+                            <label for="campaign_type">
+                                Campaign Type
+                            </label>
+
+                            <select
+                                id="campaign_type"
+                                name="campaign_type"
+                                required
+                            >
+
+                                <option value="">
+                                    Select campaign
+                                </option>
+
+                                <option value="Awareness">
+                                    Awareness
+                                </option>
+
+                                <option value="Consideration">
+                                    Consideration
+                                </option>
+
+                                <option value="Conversion">
+                                    Conversion
+                                </option>
+
+                                <option value="Retargeting">
+                                    Retargeting
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="ad_position">
+                                Ad Position
+                            </label>
+
+                            <select
+                                id="ad_position"
+                                name="ad_position"
+                                required
+                            >
+
+                                <option value="">
+                                    Select position
+                                </option>
+
+                                <option value="Top">
+                                    Top
+                                </option>
+
+                                <option value="Middle">
+                                    Middle
+                                </option>
+
+                                <option value="Search Result">
+                                    Search Result
+                                </option>
+
+                                <option value="Bottom">
+                                    Bottom
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="bid_amount">
+                                Bid Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bid_amount"
+                                name="bid_amount"
+                                placeholder="Enter amount"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="click_through_rate">
+                                Click-Through Rate
+                            </label>
+
+                            <input
+                                type="number"
+                                id="click_through_rate"
+                                name="click_through_rate"
+                                placeholder="Enter CTR"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     ENGAGEMENT
+                =============================== -->
+
+                <div class="input-section">
+
+                    <h3>
+                        Engagement
+                    </h3>
+
+                    <div class="fields-grid">
+
+
+                        <div class="input-group">
+
+                            <label for="engagement_score">
+                                Engagement Score
+                            </label>
+
+                            <input
+                                type="number"
+                                id="engagement_score"
+                                name="engagement_score"
+                                placeholder="Enter score"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="pages_viewed">
+                                Pages Viewed
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pages_viewed"
+                                name="pages_viewed"
+                                placeholder="Enter pages"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="time_on_ad_seconds">
+                                Time on Ad (sec)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="time_on_ad_seconds"
+                                name="time_on_ad_seconds"
+                                placeholder="Enter seconds"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="time_on_page_seconds">
+                                Time on Page (sec)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="time_on_page_seconds"
+                                name="time_on_page_seconds"
+                                placeholder="Enter seconds"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     PREVIOUS CUSTOMER ACTIVITY
+                =============================== -->
+
+                <div class="input-section">
+
+                    <h3>
+                        Previous Customer Activity
+                    </h3>
+
+                    <div class="fields-grid">
+
+
+                        <div class="input-group">
+
+                            <label for="previous_purchases">
+                                Previous Purchases
+                            </label>
+
+                            <input
+                                type="number"
+                                id="previous_purchases"
+                                name="previous_purchases"
+                                placeholder="Enter purchases"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="previous_ad_clicks">
+                                Previous Ad Clicks
+                            </label>
+
+                            <input
+                                type="number"
+                                id="previous_ad_clicks"
+                                name="previous_ad_clicks"
+                                placeholder="Enter clicks"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="previous_conversion_rate">
+                                Previous Conversion Rate
+                            </label>
+
+                            <input
+                                type="number"
+                                id="previous_conversion_rate"
+                                name="previous_conversion_rate"
+                                placeholder="Enter rate"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="customer_lifetime_value">
+                                Customer Lifetime Value
+                            </label>
+
+                            <input
+                                type="number"
+                                id="customer_lifetime_value"
+                                name="customer_lifetime_value"
+                                placeholder="Enter value"
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==============================
+                     PREDICT BUTTON
+                =============================== -->
+
+                <div class="button-area">
+
+                    <button
+                        type="submit"
+                        class="predict-button"
+                        id="predictButton"
+                    >
+
+                        <span class="button-text">
+                            Predict Conversion
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ==============================
+                 RESULT
+            =============================== -->
+
+            <section
+                id="predictionResult"
+                class="prediction-result"
+            >
+
+                <div class="result-icon">
+                    ✦
+                </div>
+
+                <p class="result-label">
+                    PREDICTION RESULT
+                </p>
+
+                <div
+                    class="probability"
+                    id="conversionProbability"
+                >
+                    —
+                </div>
+
+                <h2 id="resultMessage">
+                    Awaiting prediction
+                </h2>
+
+                <p id="resultRecommendation">
+                    Your prediction result will appear here.
+                </p>
+
+                <button
+                    type="button"
+                    id="newPrediction"
+                    class="new-prediction"
+                >
+                    New Prediction
+                </button>
+
+            </section>
+
+
+        </form>
+
+    </main>
+
+
+   <script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+
+</body>
+
+</html>

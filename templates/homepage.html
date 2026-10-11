@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdVision | AI-Powered Advertisement Conversion Prediction</title>
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            AdVision
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="{{ url_for('homepage') }}" class="active">
+                Home
+            </a>
+
+            <a href="{{ url_for('prediction_page') }}">
+                Prediction
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HOME PAGE -->
+    <main class="home-page">
+
+        <!-- HERO SECTION -->
+        <section class="home-hero">
+
+            <!-- LEFT SIDE -->
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    AI-POWERED ADVERTISING
+                </p>
+
+                <h1>
+                    SMARTER
+                    <span>ADVERTISING.</span>
+                    <br>
+                    BETTER
+                    <span>CONVERSIONS.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Identify high-potential ad interactions and
+                    optimize campaign investment with AI.
+                </p>
+
+                <a
+                    href="{{ url_for('prediction_page') }}"
+                    class="hero-button"
+                >
+                    Start Prediction
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- RIGHT SIDE IMAGE -->
+            <div class="hero-visual">
+
+             <img
+    src="{{ url_for('static', filename='assets/images/advision-hero.png') }}"
+    alt="AI-powered advertisement analytics"
+    class="hero-image"
+>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY ADVISION -->
+        <section class="why-section">
+
+            <div class="why-heading">
+
+                <p class="section-label">
+                    WHY ADVISION
+                </p>
+
+                <h2>
+                    Make every advertising
+                    interaction count.
+                </h2>
+
+            </div>
+
+
+            <div class="benefits">
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Focus on High-Intent Users
+                        </h3>
+
+                        <p>
+                            Identify interactions with a stronger
+                            likelihood of conversion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ↗
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Smarter Campaign Decisions
+                        </h3>
+
+                        <p>
+                            Use prediction results to prioritize
+                            advertising efforts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Improve Conversion Efficiency
+                        </h3>
+
+                        <p>
+                            Direct marketing resources toward
+                            higher-potential opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
