@@ -1,553 +1,387 @@
-/* =========================================
-   ADVISION - PREDICTION PAGE
-========================================= */
-
-/* Allow the prediction page to scroll */
-html,
-body {
+/* ADVISION PREDICTION PAGE */
+html, body {
     height: auto;
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-
-/* =========================================
-   PAGE
-========================================= */
-
 .prediction-page {
+    box-sizing: border-box;
     width: 100%;
     min-height: calc(100vh - 68px);
-
     padding: 30px 5% 60px;
-
     display: block;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
-
 .prediction-header {
     width: 100%;
     max-width: 1200px;
-
     margin: 0 auto 25px;
-
     text-align: center;
 }
-
 .prediction-label {
     margin-bottom: 7px;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 2.2px;
-
     color: #6366f1;
 }
-
 .prediction-header h1 {
     margin: 0;
-
     font-size: 38px;
     line-height: 1.1;
-
     letter-spacing: -1.7px;
-
     color: #111827;
 }
-
-.prediction-header h1 span {
-    color: #5146e5;
-}
-
+.prediction-header h1 span { color: #5146e5; }
 .prediction-header > p:last-child {
     margin-top: 9px;
-
     font-size: 14px;
-
     color: #64748b;
 }
-
-
-/* =========================================
-   FORM
-========================================= */
-
 #predictionForm {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1400px;
-
     margin: 0 auto;
 }
-
-
-/* =========================================
-   MAIN CARD
-========================================= */
-
 .input-panel {
+    box-sizing: border-box;
     width: 100%;
-
     padding: 26px 30px 30px;
-
-    background: rgba(255, 255, 255, 0.98);
-
+    background: rgba(255,255,255,.98);
     border: 1px solid #dfe6ef;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 15px 45px rgba(15, 23, 42, 0.07);
+    box-shadow: 0 15px 45px rgba(15,23,42,.07);
 }
-
-
-/* =========================================
-   PANEL HEADER
-========================================= */
-
 .panel-title {
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
     padding-bottom: 17px;
-
     border-bottom: 1px solid #edf1f5;
 }
-
 .panel-icon {
     width: 38px;
     height: 38px;
-
     flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 10px;
-
     background: #eef2ff;
-
     color: #4f46e5;
-
     font-size: 16px;
 }
-
-.panel-title h2 {
-    margin: 0;
-
-    font-size: 18px;
-
-    color: #111827;
-}
-
-.panel-title p {
-    margin-top: 3px;
-
-    font-size: 11px;
-
-    color: #94a3b8;
-}
-
-
-/* =========================================
-   SECTIONS
-========================================= */
-
-.input-section {
-    padding: 17px 0;
-
-    border-top: 1px solid #edf1f5;
-}
-
-.input-section:first-of-type {
-    border-top: none;
-}
-
+.panel-title h2 { margin: 0; font-size: 18px; color: #111827; }
+.panel-title p { margin-top: 3px; font-size: 11px; color: #94a3b8; }
+.input-section { padding: 17px 0; border-top: 1px solid #edf1f5; }
+.input-section:first-of-type { border-top: none; }
 .input-section h3 {
     margin-bottom: 10px;
-
     font-size: 10px;
-
     font-weight: 700;
-
     letter-spacing: 1.4px;
-
     text-transform: uppercase;
-
     color: #6366f1;
 }
-
-
-/* =========================================
-   GRID
-========================================= */
-
 .fields-grid {
     width: 100%;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
+    grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 13px 18px;
 }
-
-
-/* First section = 3 fields */
-
 .input-section:first-of-type .fields-grid {
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3,minmax(0,1fr));
 }
-
-
-/* =========================================
-   INPUTS
-========================================= */
-
-.input-group {
-    min-width: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-.input-group label {
-    font-size: 11px;
-
-    font-weight: 600;
-
-    color: #475569;
-}
-
-.input-group input,
-.input-group select {
+.input-group { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.input-group label { font-size: 11px; font-weight: 600; color: #475569; }
+.input-group input, .input-group select {
+    box-sizing: border-box;
     width: 100%;
     height: 40px;
-
     padding: 0 12px;
-
     border: 1px solid #dce4ed;
-
     border-radius: 8px;
-
     outline: none;
-
     background: #f8fafc;
-
     font-family: inherit;
-
     font-size: 12px;
-
     color: #1e293b;
-
-    transition: 0.2s ease;
+    transition: .2s ease;
 }
-
-.input-group input::placeholder {
-    color: #a1aec0;
-}
-
-.input-group input:hover,
-.input-group select:hover {
-    background: #ffffff;
-
+.input-group input::placeholder { color: #a1aec0; }
+.input-group input:hover, .input-group select:hover {
+    background: #fff;
     border-color: #cbd5e1;
 }
-
-.input-group input:focus,
-.input-group select:focus {
-    background: #ffffff;
-
+.input-group input:focus, .input-group select:focus {
+    background: #fff;
     border-color: #818cf8;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(99, 102, 241, 0.09);
+    box-shadow: 0 0 0 3px rgba(99,102,241,.09);
 }
-
-
-/* =========================================
-   BUTTON
-========================================= */
-
 .button-area {
     width: 100%;
-
     padding-top: 22px;
-
     margin-top: 4px;
-
     border-top: 1px solid #edf1f5;
-
     display: flex;
-
     justify-content: center;
 }
-
 .predict-button {
     width: 300px;
     height: 46px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 10px;
-
     border: none;
-
     border-radius: 10px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #4f46e5,
-            #7c3aed
-        );
-
-    color: #ffffff;
-
+    background: linear-gradient(90deg,#4f46e5,#7c3aed);
+    color: #fff;
     font-family: inherit;
-
     font-size: 13px;
-
     font-weight: 700;
-
     cursor: pointer;
-
-    box-shadow:
-        0 9px 24px
-        rgba(79, 70, 229, 0.22);
-
-    transition: 0.2s ease;
+    box-shadow: 0 9px 24px rgba(79,70,229,.22);
+    transition: .2s ease;
 }
-
-.button-arrow {
-    font-size: 17px;
-
-    transition: 0.2s ease;
-}
-
+.button-arrow { font-size: 17px; transition: .2s ease; }
 .predict-button:hover {
     transform: translateY(-2px);
-
-    box-shadow:
-        0 13px 28px
-        rgba(79, 70, 229, 0.28);
+    box-shadow: 0 13px 28px rgba(79,70,229,.28);
 }
+.predict-button:hover .button-arrow { transform: translateX(5px); }
 
-.predict-button:hover .button-arrow {
-    transform: translateX(5px);
-}
-
-
-/* =========================================
-   RESULT
-========================================= */
-
+/* Styled result panel inspired by the user's reference */
 .prediction-result {
     display: none;
-
-    width: 100%;
-    max-width: 1400px;
-
-    min-height: 520px;
-
-    margin: 30px auto 0;
-
-    padding: 55px 30px;
-
-    align-items: center;
-    justify-content: center;
-
+    box-sizing: border-box;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: min(100%,820px);
+    margin: 26px auto 40px;
+    padding: 32px 30px 28px;
     flex-direction: column;
-
-    text-align: center;
-
-    background: rgba(255, 255, 255, 0.98);
-
-    border: 1px solid #dfe6ef;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 15px 45px
-        rgba(15, 23, 42, 0.07);
-}
-
-.result-icon {
-    width: 78px;
-    height: 78px;
-
-    display: flex;
-
     align-items: center;
-    justify-content: center;
-
-    margin-bottom: 20px;
-
-    border-radius: 50%;
-
-    background: #eef2ff;
-
-    border: 1px solid #c7d2fe;
-
-    color: #4f46e5;
-
-    font-size: 30px;
+    text-align: center;
+    background:
+      radial-gradient(circle at 8% 15%,rgba(124,58,237,.08),transparent 22%),
+      radial-gradient(circle at 92% 25%,rgba(16,185,129,.08),transparent 25%),
+      #fff;
+    border: 1px solid #e5eaf2;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(31,41,55,.08);
 }
-
+.prediction-result::before, .prediction-result::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 9px;
+    height: 9px;
+    border-radius: 3px;
+    opacity: .65;
+    animation: result-float 4s ease-in-out infinite;
+}
+.prediction-result::before {
+    top: 24%; left: 9%; background: #7dd3fc;
+}
+.prediction-result::after {
+    top: 30%; right: 10%; background: #c4b5fd; animation-delay: 1.2s;
+}
+@keyframes result-float {
+    0%,100% { transform: translateY(0) rotate(35deg); }
+    50% { transform: translateY(-8px) rotate(55deg); }
+}
+.result-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 60px; height: 60px; margin-bottom: 13px;
+    color: #059669; background: #e7fff3; border: 1px solid #b9f4d6;
+    border-radius: 50%; font-size: 27px; font-weight: 800;
+}
 .result-label {
-    margin-bottom: 8px;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    color: #6366f1;
+    margin: 0 0 8px; color: #059669; font-size: 10px;
+    font-weight: 800; letter-spacing: 2px;
 }
-
-.probability {
-    font-size: 62px;
-
-    line-height: 1;
-
-    font-weight: 800;
-
-    color: #4f46e5;
+.prediction-result .probability {
+    margin: 0; color: #10b981; font-size: clamp(48px,7vw,66px);
+    font-weight: 850; line-height: 1.05; letter-spacing: -2.5px;
 }
-
 .prediction-result h2 {
-    margin-top: 16px;
-
-    font-size: 27px;
-
-    color: #1e293b;
+    margin: 5px 0 0; color: #14213d; font-size: 23px; font-weight: 800;
 }
-
 #resultRecommendation {
-    max-width: 570px;
-
-    margin-top: 12px;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-
-    color: #64748b;
+    display: inline-block; max-width: 90%; margin: 10px 0 22px;
+    padding: 7px 14px; color: #047857; background: #dcfce7;
+    border-radius: 20px; font-size: 12px; line-height: 1.5;
 }
-
+.result-insights {
+    display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 12px; width: 100%; margin-top: 2px;
+}
+.insight-card {
+    min-width: 0; padding: 15px 12px 13px; text-align: left;
+    background: rgba(248,250,252,.9); border: 1px solid #e7edf4;
+    border-radius: 13px;
+}
+.insight-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; margin-bottom: 11px;
+    border-radius: 9px; font-size: 16px; font-weight: 700;
+}
+.audience-icon { color: #0284c7; background: #e0f2fe; }
+.campaign-icon { color: #059669; background: #d1fae5; }
+.platform-icon { color: #d97706; background: #fef3c7; }
+.insight-heading { margin: 0 0 5px; color: #64748b; font-size: 10px; font-weight: 600; }
+.insight-value { margin: 0; color: #172554; font-size: 14px; font-weight: 800; overflow-wrap: anywhere; }
+.insight-note { margin: 5px 0 0; color: #94a3b8; font-size: 10px; }
 .new-prediction {
-    margin-top: 26px;
-
-    padding: 11px 24px;
-
-    border: 1px solid #cbd5e1;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    color: #334155;
-
-    font-family: inherit;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 220px; min-height: 43px; margin-top: 23px; padding: 0 22px;
+    border: none; border-radius: 10px; color: #fff;
+    background: linear-gradient(100deg,#5946ee,#8738ef);
+    font-family: inherit; font-size: 12px; font-weight: 750; cursor: pointer;
+    box-shadow: 0 8px 20px rgba(99,70,230,.22);
+    transition: transform .2s ease, box-shadow .2s ease;
 }
-
-.new-prediction:hover {
-    border-color: #6366f1;
-
-    color: #4f46e5;
-
-    background: #f8f7ff;
+.new-prediction:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(99,70,230,.3); }
+.prediction-result.is-no-conversion .result-icon {
+    color: #d97706; background: #fff7e6; border-color: #fde2b5;
+}
+.prediction-result.is-no-conversion .result-label,
+.prediction-result.is-no-conversion .probability { color: #d97706; }
+.prediction-result.is-no-conversion #resultRecommendation {
+    color: #92400e; background: #fef3c7;
+}
+@media (max-width:900px) {
+    .fields-grid, .input-section:first-of-type .fields-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (max-width:600px) {
+    .prediction-page { padding: 24px 4% 40px; }
+    .prediction-header h1 { font-size: 29px; }
+    .input-panel { padding: 20px 17px 22px; }
+    .fields-grid, .input-section:first-of-type .fields-grid { grid-template-columns: 1fr; }
+    .prediction-result { padding: 28px 17px 24px; border-radius: 20px; }
+    .result-insights { grid-template-columns: 1fr; gap: 9px; }
+    .insight-card {
+        display: grid; grid-template-columns: 34px 1fr; column-gap: 10px;
+        align-items: center; padding: 11px;
+    }
+    .insight-icon { grid-row: 1 / span 3; margin: 0; }
+    .insight-heading, .insight-value, .insight-note { grid-column: 2; }
+    .prediction-result .probability { font-size: 49px; }
+    .new-prediction, .predict-button { width: 100%; }
+}
+@media (prefers-reduced-motion:reduce) {
+    .prediction-result::before, .prediction-result::after, .new-prediction {
+        animation: none; transition: none;
+    }
+    .new-prediction:hover { transform: none; }
 }
 
 
 /* =========================================
-   TABLET
+   RESULT PAGE — COMPACT DESKTOP FIT
+   Add this at the END of prediction.css
 ========================================= */
 
-@media (max-width: 900px) {
-
+@media (min-width: 901px) {
     .prediction-page {
-        padding:
-            25px 20px 50px;
+        padding: 18px 4% 22px;
+        min-height: calc(100vh - 68px);
     }
 
-    .fields-grid,
-    .input-section:first-of-type .fields-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .prediction-page {
-        padding:
-            22px 14px 45px;
+    .prediction-header {
+        margin-bottom: 16px;
     }
 
     .prediction-header h1 {
-        font-size: 28px;
+        font-size: 34px;
     }
 
     .prediction-header > p:last-child {
-        font-size: 12px;
-
-        line-height: 1.5;
-    }
-
-    .input-panel {
-        padding:
-            20px 16px 25px;
-    }
-
-    .fields-grid,
-    .input-section:first-of-type .fields-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .predict-button {
-        width: 100%;
+        margin-top: 6px;
     }
 
     .prediction-result {
-        min-height: 450px;
-
-        padding:
-            40px 20px;
+        margin: 16px auto 20px;
+        padding: 24px 28px 22px;
+        width: min(100%, 820px);
     }
 
-    .probability {
-        font-size: 48px;
+    .result-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 9px;
+        font-size: 23px;
+    }
+
+    .result-label {
+        margin-bottom: 5px;
+        font-size: 9px;
+    }
+
+    .prediction-result .probability {
+        font-size: 56px;
+        line-height: 1;
+    }
+
+    .prediction-result h2 {
+        margin-top: 4px;
+        font-size: 21px;
+    }
+
+    #resultRecommendation {
+        margin: 8px 0 16px;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .result-insights {
+        gap: 10px;
+    }
+
+    .insight-card {
+        padding: 11px 12px;
+    }
+
+    .insight-icon {
+        width: 27px;
+        height: 27px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .insight-heading {
+        font-size: 9px;
+        margin-bottom: 4px;
+    }
+
+    .insight-value {
+        font-size: 12px;
+    }
+
+    .insight-note {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+    .new-prediction {
+        min-height: 39px;
+        margin-top: 16px;
+    }
+}
+
+/* Keep mobile comfortable; scrolling is allowed on smaller screens */
+@media (max-width: 900px) {
+    .prediction-page {
+        padding-top: 22px;
+        padding-bottom: 32px;
+    }
+
+    .prediction-result {
+        margin-top: 20px;
     }
 }

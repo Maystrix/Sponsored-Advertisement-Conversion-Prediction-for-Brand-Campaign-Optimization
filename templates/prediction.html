@@ -587,53 +587,43 @@
                 </div>
 
 
-            </section>
-
-
-            <!-- ==============================
-                 RESULT
-            =============================== -->
-
-            <section
-                id="predictionResult"
-                class="prediction-result"
-            >
-
-                <div class="result-icon">
-                    ✦
-                </div>
-
-                <p class="result-label">
-                    PREDICTION RESULT
-                </p>
-
-                <div
-                    class="probability"
-                    id="conversionProbability"
-                >
-                    —
-                </div>
-
-                <h2 id="resultMessage">
-                    Awaiting prediction
-                </h2>
-
-                <p id="resultRecommendation">
-                    Your prediction result will appear here.
-                </p>
-
-                <button
-                    type="button"
-                    id="newPrediction"
-                    class="new-prediction"
-                >
-                    New Prediction
-                </button>
-
-            </section>
+        </section>
 
 
         </form>
+
+
+        <!-- ==============================
+             RESULT
+            =============================== -->
+        <section id="predictionResult" class="prediction-result" style="display: none;">
+    <div class="result-icon" aria-hidden="true">▥</div>
+    <p class="result-label">PREDICTION RESULT</p>
+    <div class="probability" id="conversionProbability">—</div>
+    <h2 id="resultMessage">Awaiting prediction</h2>
+    <p id="resultRecommendation">Your prediction result will appear here.</p>
+    <div class="result-insights">
+        <article class="insight-card">
+            <div class="insight-icon audience-icon" aria-hidden="true">♙</div>
+            <p class="insight-heading">Target Audience</p>
+            <p class="insight-value" id="resultAudience">—</p>
+            <p class="insight-note">Selected audience</p>
+        </article>
+        <article class="insight-card">
+            <div class="insight-icon campaign-icon" aria-hidden="true">⚑</div>
+            <p class="insight-heading">Campaign Type</p>
+            <p class="insight-value" id="resultCampaign">—</p>
+            <p class="insight-note">Selected campaign</p>
+        </article>
+        <article class="insight-card">
+            <div class="insight-icon platform-icon" aria-hidden="true">▣</div>
+            <p class="insight-heading">Platform</p>
+            <p class="insight-value" id="resultPlatform">—</p>
+            <p class="insight-note">Selected platform</p>
+        </article>
+    </div>
+    <button type="button" id="newPrediction" class="new-prediction">↻ &nbsp; New Prediction</button>
+</section>
 
     </main>
 
